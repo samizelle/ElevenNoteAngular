@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Note } from 'src/app/models/Note';
-import { NotesService } from 'elevenNoteAngular/src/app/services/notes.service';
+import { NotesService } from 'src/app/services/notes.service';
 
 @Component({
   selector: 'app-note-detail',

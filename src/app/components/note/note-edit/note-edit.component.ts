@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
-import { NotesService } from 'elevenNoteAngular/src/app/services/notes.service';
+import { NotesService } from 'src/app/services/notes.service';
 import { Note } from 'src/app/models/Note';
 import { ActivatedRoute, Router } from '@angular/router';
 
