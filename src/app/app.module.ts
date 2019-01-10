@@ -3,19 +3,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
 
 import {
   MatToolbarModule, 
   MatButtonModule,
   MatFormFieldModule, 
-  MatInputModule,
-  MatTableModule
+  MatInputModule
 } from '@angular/material'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RegistrationComponent } from './components/registration/registration.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { NotesService } from './services/notes.service';
 import { NoteCreateComponent } from './components/note/note-create/note-create.component';
@@ -27,14 +27,14 @@ import { NoteDeleteComponent } from './components/note/note-delete/note-delete.c
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
-  {path: 'login', component: LoginComponent},
+  { path: 'login', component: LoginComponent},
   { path: 'notes', children: [
-    { path: '', component: NoteIndexComponent },
-    { path: 'create', component: NoteCreateComponent },
-    { path: 'details', component: NoteDetailComponent },
-    { path: 'edit/:id', component: NoteEditComponent },
-    { path: 'delete/:id', component: NoteDeleteComponent }
-  ]},
+     { path: '', component: NoteIndexComponent },
+     { path: 'create', component: NoteCreateComponent },
+     { path: 'details', component: NoteDetailComponent },
+     { path: 'edit/:id', component: NoteEditComponent },
+     { path: 'delete/:id', component: NoteDeleteComponent }
+   ]},
   { path: '**', component: RegistrationComponent }
 ];
 
@@ -43,8 +43,8 @@ const routes = [
     AppComponent,
     HeaderComponent,
     RegistrationComponent,
-    NoteCreateComponent,
     LoginComponent,
+    NoteCreateComponent,
     NoteIndexComponent,
     NoteDetailComponent,
     NoteEditComponent,
